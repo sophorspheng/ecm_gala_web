@@ -225,7 +225,7 @@ const HomePage = (req, res) => {
                     <td>{item.email}</td>
                     <td>
                       <img
-                        src={`https://github.com/sophorspheng/backendweb/tree/main/image/${item.image}`}
+                        src={`http://localhost/img/${item.image}`}
                         alt="pic"
                         length="100px"
                         width="100px"
