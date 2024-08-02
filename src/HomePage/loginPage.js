@@ -43,7 +43,7 @@ const Login = () => {
       email: email,
       password: password,
     };
-    axios.post("http://localhost:8080/login", params).then((res) => {
+    axios.post("https://backendweb-chi.vercel.app/login", params).then((res) => {
       if (res.data && res.data.is_login) {
         // message.success("Login success");
         localStorage.setItem("login", "1"); //is_login = value 1

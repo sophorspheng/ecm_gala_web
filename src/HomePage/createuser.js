@@ -49,7 +49,7 @@ const HomePage = (req, res) => {
   }, []);
   const getList = () => {
     axios({
-      url: "http://localhost:8080/getList",
+      url: "https://backendweb-chi.vercel.app/getList",
       method: "GET",
     })
       .then((res) => {
@@ -81,7 +81,7 @@ const HomePage = (req, res) => {
     formData.append("password", password);
     formData.append("myfile", image);
     const result = await axios
-      .post("http://localhost:8080/create", formData, {
+      .post("https://backendweb-chi.vercel.app/create", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       })
       .then((res) => {
@@ -101,7 +101,7 @@ const HomePage = (req, res) => {
     formData.append("email", email);
     formData.append("myfile", image);
     const result = await axios
-      .put("http://localhost:8080/update", formData, {
+      .put("https://backendweb-chi.vercel.app/update", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       })
       .then((res) => {
@@ -144,7 +144,7 @@ const HomePage = (req, res) => {
   const onConfirmDelete = (id) => {
     // alert("successfully");
     axios({
-      url: "http://localhost:8080/remove/" + id,
+      url: "https://backendweb-chi.vercel.app/remove/" + id,
       method: "DELETE",
       //data: {}//json body params
     }).then((res) => {

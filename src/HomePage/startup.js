@@ -72,7 +72,7 @@ const About = (props) => {
     formData.append("password", password);
     formData.append("myfile", image);
 
-    await axios.post("http://localhost:8080/create", formData, {
+    await axios.post("https://backendweb-chi.vercel.app/create", formData, {
       headers: { "Content-Type": "multipart/form-data" },
     }).then((res) => {
       setVisibleModal(false);
