@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+li {
+  list-style: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+}
+li :hover {
+  color: red;
+  font-size: 40px;
+  font-style: oblique;
+}
+a {
+  text-decoration: none;
+  color: darkgray;
+}
+.nav1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
+  background: rgb(0, 28, 73);
+  box-shadow: brown;
+}
+.logo1 {
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  justify-items: center;
+  padding-left: 0.3rem;
+  padding-top: 5px;
+}
+.nav_logo {
+  text-transform: uppercase;
+
+  font-weight: bold;
+  font-size: larger;
+  align-items: center;
+}
+.nav_menu1 {
+  display: flex;
+  gap: 14rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav_toggler1 div {
+  background: darkgray;
+  width: 20px;
+  height: 3px;
+  margin: 4px;
+}
+.nav_toggler1 {
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .nav_toggler1 {
+    display: block;
+  }
+  .logo1 {
+    width: 50px;
+    height: 52px;
+  }
+
+  .nav_menu1 {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    width: 50%;
+    height: 93vh;
+    background: rgb(0, 28, 73);
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.2s ease-in;
+  }
+}
+.nav_active {
+  transform: translateX(0);
+}
+.nav_profile {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+.nav_profile :hover {
+  cursor: pointer;
+  color: red;
+  font-size: 30px;
+  font-style: oblique;
+}

@@ -1,25 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
+import CustomerPage from "./HomePage/customerPage";
+import Layout from "./HomePage/Layout";
+import Login from "./HomePage/loginPage";
+import FrontPage from "./HomePage/startup"
+
+
+export default function App() {
+  const isLogin = localStorage.getItem("login") == "1";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {!isLogin && (
+        <Routes>
+           <Route path="/" element={<FrontPage />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+        </Routes>
+      )}
+      {isLogin && (
+        <Layout>
+          <Routes>
+            <Route path="/customer" element={<CustomerPage />}></Route>
+          </Routes>
+        </Layout>
+      )}
+      <Routes></Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
