@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../HomePage/styleSheet.css';
-import logo from './MiniMart2.png';
+import logo from './logo.png';
 import logo1 from './12.jpg';
 import logo2 from './13.jpg';
 import logo3 from './14.jpg';
