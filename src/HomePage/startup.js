@@ -179,6 +179,7 @@ const About = (props) => {
           </Dropdown>
         </div>
       </header>
+      <body>
       <Content style={{ padding: '20px' }}>
         <Row justify="center">
           <Col span={12}>
@@ -204,6 +205,7 @@ const About = (props) => {
           </Col>
         </Row>
       </Content>
+      </body>
       <Modal
         open={visibleModal}
         title="New Customer"
